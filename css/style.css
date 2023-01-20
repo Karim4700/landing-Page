@@ -1,0 +1,455 @@
+:root {
+    --mainColor-- : #407BFF;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/***************** header ****************/
+
+header {
+    width: 100%;
+    height: 10vh;
+    padding: 20px 40px ;
+    position: fixed;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 999;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
+}
+
+/***************** logo ****************/
+
+header .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+header .logo p {
+    margin-left: 10px;
+}
+header .logo i {
+    color: var(--mainColor--);
+}
+
+/***************** Nav ****************/
+header nav {
+    display: flex;
+}
+header nav ul {
+    display: flex;
+}
+header nav ul li {
+    list-style: none;
+    margin: 10px;
+}
+header nav ul li a {
+    padding: 10px;
+    text-decoration: none;
+    color: #7a7a7a;
+    border-radius: 5px;
+    transition: .4s ease;
+    cursor: pointer;
+}
+header nav i {
+    opacity: 0;
+}
+header nav ul li:hover a {
+    background-color: var(--mainColor--);
+    color: #fff;
+}
+header nav ul li.active a {
+    background-color: var(--mainColor--);
+    color: #fff;
+}
+/***************** Home ****************/
+.home.active {
+    background-color: #75a1ff;
+}
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 15vh 40px;
+    transition: background-color 1s;
+}
+
+/***************** Home Info ****************/
+
+.home .info {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+.home .info p {
+    font-size: 3rem;
+    font-weight: 500;
+}
+.home .info p span {
+    color: var(--mainColor--);
+}
+.home .info span {
+    color: #7a7a7a;
+    margin: 30px 0;
+}
+
+.home .info a {
+    width: fit-content;
+    color: #fff;
+    background-color: var(--mainColor--);
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+}
+.home .info a:hover {
+    background-color: #3367d5;
+}
+.home img {
+    width: 500px;
+}
+
+/* Responsive */
+
+@media (min-width: 767px) and (max-width: 1023px) {
+    .home {
+        flex-direction: column;
+        padding: 15vh 20px;
+    }
+    .home .info {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .home .info p {
+        font-size: 2rem;
+    }
+    .home .info span {
+        text-align: center;
+    }
+    .home img {
+        width: 70%;
+        margin-top: 40px;
+    }
+}
+@media (max-width: 767px) {
+    .home {
+        flex-direction: column;
+        padding: 15vh 20px;
+    }
+    .home .info {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .home .info p {
+        font-size: 2rem;
+    }
+    .home .info span {
+        text-align: center;
+    }
+    .home img {
+        width: 100%;
+        margin-top: 40px;
+    }
+    header nav i {
+        opacity: 1;
+        font-size: 1.4rem;
+        margin-left: 30px;
+    }
+    header nav ul {
+        display: none;
+    }
+}
+
+
+/**************** About ****************/
+.about.active {
+    background-color: #75a1ff;
+}
+
+
+.about {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    padding-top: 15vh;
+    background-color: #eee;
+    transition: background-color 1s;
+}
+.about .header p {
+    font-size: 2rem;
+    position: relative;
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+.about .header p span {
+    color: var(--mainColor--);
+}
+
+
+
+.about .container .info {
+    max-width: 400px;
+    background-color: white;
+    border-radius: 5px;
+    color: var(--mainColor--);
+    padding: 40px;
+    font-size: 1.5rem;
+    line-height: 40px;
+    font-weight: 600;
+}
+
+
+.about .container img {
+    width: 400px;
+}
+
+@media (max-width: 767px) {
+    .about .container img {
+        display: none;
+    }
+}
+
+/*************** Skills ****************/
+
+.skills.active {
+    background-color: #75a1ff;
+}
+
+.skills {
+    height: 100vh;
+    padding: 40px;
+    padding-top: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background-color 1s;
+}
+
+.skills .header p {
+    font-size: 2rem;
+    position: relative;
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+.skills .header p span {
+    color: var(--mainColor--);
+}
+
+
+.skills .container .info .state {
+    margin: 20px 0;
+}
+
+.skills .container .info .state .bar {
+    height: 30px;
+    width: 500px;
+    background-color: #eee;
+    border-radius: 50px;
+    position: relative;
+}
+.skills .container .info .state .one::before {
+    content: "";
+    width: 70%;
+    height: 100%;
+    background-color: rgba(241, 0, 0, 0.6);
+    position: absolute;
+    border-radius: 50px;
+}
+.skills .container .info .state .two::before {
+    content: "";
+    width: 80%;
+    height: 100%;
+    background-color: rgba(0, 68, 241, 0.6);
+    position: absolute;
+    border-radius: 50px;
+}
+.skills .container .info .state .three::before {
+    content: "";
+    width: 50%;
+    height: 100%;
+    background-color: rgba(241, 229, 0, 0.6);
+    position: absolute;
+    border-radius: 50px;
+}
+
+.skills .container .info .state .bar span {
+    position: absolute;
+    top: 50%;
+    right: -50px;
+    transform: translateY(-50%);
+}
+.skills .container img {
+    width: 400px;
+}
+@media (max-width: 767px) {
+    .skills .container img {
+        display: none;
+    }
+    .skills .container .info .state .bar {
+        width: 200px;
+    }
+}
+@media (min-width: 767px) and (max-width: 1023px) {
+    .skills .container .info .state .bar {
+        width: 300px;
+    }
+}
+
+/*************** Contact ****************/
+
+.contact.active {
+    background-color: #75a1ff;
+}
+
+.contact {
+    height: 100vh;
+    padding: 40px;
+    padding-top: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eee;
+    transition: background-color 1s;
+}
+.contact .header p {
+    font-size: 2rem;
+    position: relative;
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+.contact .header p span {
+    color: var(--mainColor--);
+}
+
+.contact .container .info {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 6px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.15);
+}
+.contact .container .info input {
+    width: 100%;
+    padding: 20px;
+    font-size: 18px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+.contact .container .info button {
+    padding: 15px;
+    font-size: 1rem;
+    background-color: var(--mainColor--);
+    border: none;
+    outline: none;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+}
+@media (max-width: 767px) {
+    .contact .container img {
+        display: none;
+    }
+}
+
+
+
+
+
+/* Mobile Nav */
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    background-color: var(--mainColor--);
+    width: 100%;
+    height: 5vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px;
+    opacity: 0;
+    transition: .4s ease;
+    z-index: 10;
+}
+.mobile-nav ul {
+    display: flex;
+}
+.mobile-nav ul li {
+    list-style: none;
+    cursor: pointer;
+    transition: .4s ease;
+    padding: 10px;
+    border-radius: 5px;
+}
+.mobile-nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: .4s ease;
+    font-size: 16px;
+}
+
+.mobile-nav.active {
+    opacity: 1;
+    top: 10vh;
+}
+
+
+/* Mark */
+
+.mark {
+    width: 80px;
+    position: fixed;
+    top: 20%;
+    right: -70px;
+    background-color: var(--mainColor--);
+    padding: 10px;
+    color: #fff;
+    font-weight: 600;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transition: .4s ease;
+    display: none;
+    z-index: 999;
+}
+
+.mark.active {
+    right: 0;
+}
+
+@media (max-width: 767px) {
+    .mark {
+        display: block;
+    }
+    .mobile-nav {
+        display: flex;
+    }
+}
